@@ -27,3 +27,4 @@ stage ('Deployment'){
 stage ('Notification'){
 	slackSend color: 'good', message: 'Deployment successful'
 }
+}

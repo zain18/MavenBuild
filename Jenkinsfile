@@ -22,5 +22,8 @@ stage ('Archive Artifacts'){
 	
 stage ('Deployment'){
 	//sh 'cp target/*.war /opt/tomcat8/webapps'
+	//slackSend color: 'good', message: 'Message from Jenkins Pipeline'
 }
+stage ('Notification'){
+	slackSend color: 'good', message: 'Deployment successful'
 }
